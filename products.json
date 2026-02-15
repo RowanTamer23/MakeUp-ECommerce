@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "name": "Velvet Matte Lipstick",
+    "category": "lips",
+    "price": 24.99,
+    "badge": "Bestseller",
+    "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400&h=400&fit=crop"
+  },
+  {
+    "id": 2,
+    "name": "Satin Lip Gloss",
+    "category": "lips",
+    "price": 18.99,
+    "badge": null,
+    "image": "https://www.elfcosmetics.com/dw/image/v2/BBXC_PRD/on/demandware.static/-/Sites-elf-master/default/dw4d94a7ac/2024/LipPlumpingGlossRepack/SweetTalker/82458_OpenA_V2_R.jpg?sfrm=png&sw=700&q=90&strip=false"
+  },
+  {
+    "id": 3,
+    "name": "Creamy Lip Liner",
+    "category": "lips",
+    "price": 12.99,
+    "badge": null,
+    "image": "https://m.media-amazon.com/images/I/71-+t4gtkhL.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Hydrating Lip Oil",
+    "category": "lips",
+    "price": 16.99,
+    "badge": null,
+    "image": "https://www.arbonne.com/medias/7972-NZ-1-AM-LipOil-HydratingLipSerum-Lychee-586x586.png?context=bWFzdGVyfGltYWdlc3w5MzQ3OXxpbWFnZS9wbmd8YURGaUwyaGxOUzg0T0RReE1EQTFORFkxTmpNd0x6YzVOekpmVGxwZk1WOUJUVjlNYVhCUGFXeGZTSGxrY21GMGFXNW5UR2x3VTJWeWRXMWZUSGxqYUdWbFh6VTRObmcxT0RZdWNHNW58NjQ2ODc3YTg3ZTg0MWQyM2U5YWExNzFiNTcwZDY3MTk5ZWRmYzBlOTY2NjYwOWRkNjE1ZTQzNWYwZDMyNmEzNw"
+  },
+  {
+    "id": 5,
+    "name": "Silk Foundation",
+    "category": "face",
+    "price": 38.99,
+    "badge": "New",
+    "image": "https://www.mazaya.eg/media/catalog/product/4/0/4019674483039_1.jpg?store=en&image-type=image"
+  },
+  {
+    "id": 6,
+    "name": "Luminous Concealer",
+    "category": "face",
+    "price": 22.99,
+    "badge": null,
+    "image": "https://static.beautytocare.com/cdn-cgi/image/width=1600,height=1600,f=auto/media/catalog/product//l/-/l-a-girl-pro-conceal-hd-concealer-light-ivory-8g.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Rose Petal Blush",
+    "category": "face",
+    "price": 26.99,
+    "badge": "Bestseller",
+    "image": "https://malabeautyeg.com/cdn/shop/files/14_0747289c-5ccd-40b7-a03c-fcfe66ba1462.jpg?v=1754309722"
+  },
+  {
+    "id": 8,
+    "name": "Setting Powder Duo",
+    "category": "face",
+    "price": 32.99,
+    "badge": null,
+    "image": "https://m.media-amazon.com/images/I/61U5qJjkf7L._AC_UF894,1000_QL80_.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Shimmer Eyeshadow Palette",
+    "category": "eyes",
+    "price": 42.99,
+    "badge": "Trending",
+    "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=400&fit=crop"
+  },
+  {
+    "id": 10,
+    "name": "Volumizing Mascara",
+    "category": "eyes",
+    "price": 19.99,
+    "badge": null,
+    "image": "https://www.maybelline-me.com/-/media/project/loreal/brand-sites/mny/apac/mena/products/eye-makeup/lash-sensational/maybelline-lash-sensational-sky-high-wsh-800-blackest-black-041554590517-av11.png?rev=aafd5f97e4b3461986b22a8842acc2c1&cx=0.38&cy=0.1&cw=315&ch=472&hash=5D62EB0C9C9CD7D3B77696F802B2AD56"
+  },
+  {
+    "id": 11,
+    "name": "Precision Eyeliner",
+    "category": "eyes",
+    "price": 14.99,
+    "badge": null,
+    "image": "https://images-cdn.ubuy.co.in/663dc1b2459b0b02e61e89f7-cosprof-liquid-eyeliner-stamp-waterproof.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Brow Gel",
+    "category": "eyes",
+    "price": 17.99,
+    "badge": null,
+    "image": "https://browsandlashes.com.au/wp-content/uploads/2023/09/Untitled-design-14.png"
+  },
+  {
+    "id": 13,
+    "name": "Vitamin C Serum",
+    "category": "skincare",
+    "price": 34.99,
+    "badge": "Popular",
+    "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=400&fit=crop"
+  },
+  {
+    "id": 14,
+    "name": "Hydrating Face Mist",
+    "category": "skincare",
+    "price": 21.99,
+    "badge": null,
+    "image": "https://zynah.me/cdn/shop/products/Lavender-MistTraceCosmetics.jpg?v=1649298988"
+  },
+  {
+    "id": 15,
+    "name": "Clay Mask",
+    "category": "skincare",
+    "price": 28.99,
+    "badge": null,
+    "image": "https://eshaorganics.com/wp-content/uploads/2025/07/clay-msk.webp"
+  },
+  {
+    "id": 16,
+    "name": "Overnight Repair Cream",
+    "category": "skincare",
+    "price": 44.99,
+    "badge": null,
+    "image": "https://m.media-amazon.com/images/I/51j31X5RprL._SL1052_.jpg"
+  }
+]

@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glamour | Premium Makeup & Skincare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Playfair Display", "serif"],
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            colors: {
+              glamour: {
+                pink: "#E8929C",
+                "pink-dark": "#D67B8A",
+                "pink-light": "#F5D5D9",
+                "pink-bg": "#FDF2F3",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-white">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <a
+            href="index.html"
+            class="text-2xl font-bold font-serif text-gradient"
+            >Glamour</a
+          >
+
+          <!-- Navigation -->
+          <nav class="hidden md:flex space-x-8">
+            <a href="index.html" class="text-glamour-pink font-medium">Home</a>
+            <a
+              href="products.html"
+              class="text-gray-600 hover:text-glamour-pink transition"
+              >Products</a
+            >
+            <a
+              href="cart.html"
+              class="text-gray-600 hover:text-glamour-pink transition"
+              >Cart</a
+            >
+          </nav>
+
+          <!-- Icons -->
+          <div class="flex items-center space-x-4">
+            <a
+              href="login.html"
+              class="text-gray-600 hover:text-glamour-pink transition"
+            >
+              <i class="far fa-user text-xl"></i>
+            </a>
+            <a
+              href="cart.html"
+              class="relative text-gray-600 hover:text-glamour-pink transition"
+            >
+              <i class="fa-solid fa-bag-shopping text-xl"></i>
+              <span
+                id="cart-badge"
+                class="absolute -top-2 -right-2 bg-glamour-pink text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+                >0</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 lg:py-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span
+          class="inline-block px-4 py-2 bg-white/60 rounded-full text-sm font-semibold text-glamour-pink mb-6 tracking-wide uppercase"
+          >New Collection 2026</span
+        >
+        <h1
+          class="text-5xl lg:text-7xl font-serif font-bold text-gray-900 mb-6 leading-tight"
+        >
+          Discover Your <span class="text-gradient">Natural<br />Beauty</span>
+        </h1>
+        <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          Premium makeup & skincare crafted with love. Enhance your glow with
+          our curated essentials.
+        </p>
+        <a
+          href="products.html"
+          class="inline-flex items-center px-8 py-4 bg-glamour-pink hover:bg-glamour-pink-dark text-white font-semibold rounded-full transition transform hover:scale-105"
+        >
+          Shop Now <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Value Props -->
+    <section class="bg-white border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div class="flex items-center justify-center space-x-3">
+            <i class="fas fa-shipping-fast text-glamour-pink text-xl"></i>
+            <span class="text-gray-600 font-medium"
+              >Free Shipping over $50</span
+            >
+          </div>
+          <div class="flex items-center justify-center space-x-3">
+            <i class="fas fa-leaf text-glamour-pink text-xl"></i>
+            <span class="text-gray-600 font-medium">Cruelty-Free & Vegan</span>
+          </div>
+          <div class="flex items-center justify-center space-x-3">
+            <i class="far fa-heart text-glamour-pink text-xl"></i>
+            <span class="text-gray-600 font-medium">30-Day Returns</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop by Category -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl font-serif font-bold text-center text-gray-900 mb-12"
+        >
+          Shop by Category
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Category 1 -->
+          <a
+            href="products.html"
+            class="group relative h-72 rounded-2xl overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400&h=500&fit=crop"
+              alt="Lip Products"
+              class="w-full h-full object-cover transition transform group-hover:scale-110"
+            />
+            <div class="absolute inset-0 category-overlay"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+              <h3 class="text-xl font-serif font-bold">Lipsticks</h3>
+              <p class="text-sm opacity-90">4 products</p>
+            </div>
+          </a>
+
+          <!-- Category 2 -->
+          <a
+            href="products.html"
+            class="group relative h-72 rounded-2xl overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&h=500&fit=crop"
+              alt="Face Makeup"
+              class="w-full h-full object-cover transition transform group-hover:scale-110"
+            />
+            <div class="absolute inset-0 category-overlay"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+              <h3 class="text-xl font-serif font-bold">Foundation</h3>
+              <p class="text-sm opacity-90">4 products</p>
+            </div>
+          </a>
+
+          <!-- Category 3 -->
+          <a
+            href="products.html"
+            class="group relative h-72 rounded-2xl overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=500&fit=crop"
+              alt="Eye Products"
+              class="w-full h-full object-cover transition transform group-hover:scale-110"
+            />
+            <div class="absolute inset-0 category-overlay"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+              <h3 class="text-xl font-serif font-bold">Eyeshadow</h3>
+              <p class="text-sm opacity-90">4 products</p>
+            </div>
+          </a>
+
+          <!-- Category 4 -->
+          <a
+            href="products.html"
+            class="group relative h-72 rounded-2xl overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=500&fit=crop"
+              alt="Skincare"
+              class="w-full h-full object-cover transition transform group-hover:scale-110"
+            />
+            <div class="absolute inset-0 category-overlay"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+              <h3 class="text-xl font-serif font-bold">Skincare</h3>
+              <p class="text-sm opacity-90">4 products</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bestsellers -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl font-serif font-bold text-center text-gray-900 mb-12"
+        >
+          Bestsellers
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Product 1 -->
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-lg transition"
+          >
+            <div class="relative h-64 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400&h=400&fit=crop"
+                alt="Velvet Matte Lipstick"
+                class="w-full h-full object-cover transition transform group-hover:scale-105"
+              />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 bg-glamour-pink text-white text-xs font-semibold rounded-full"
+                >Bestseller</span
+              >
+            </div>
+            <div class="p-5">
+              <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">
+                LIPS
+              </p>
+              <h3 class="font-serif font-bold text-gray-900 mb-2">
+                Velvet Matte Lipstick
+              </h3>
+              <div class="flex justify-between items-center">
+                <span class="text-glamour-pink font-bold text-lg">$24.99</span>
+                <button
+                  onclick="addToCart('Velvet Matte Lipstick', 24.99)"
+                  class="px-4 py-2 bg-glamour-pink hover:bg-glamour-pink-dark text-white text-sm font-medium rounded-full transition"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-lg transition"
+          >
+            <div class="relative h-64 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop"
+                alt="Rose Petal Blush"
+                class="w-full h-full object-cover transition transform group-hover:scale-105"
+              />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 bg-glamour-pink text-white text-xs font-semibold rounded-full"
+                >Bestseller</span
+              >
+            </div>
+            <div class="p-5">
+              <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">
+                FACE
+              </p>
+              <h3 class="font-serif font-bold text-gray-900 mb-2">
+                Rose Petal Blush
+              </h3>
+              <div class="flex justify-between items-center">
+                <span class="text-glamour-pink font-bold text-lg">$26.99</span>
+                <button
+                  onclick="addToCart('Rose Petal Blush', 26.99)"
+                  class="px-4 py-2 bg-glamour-pink hover:bg-glamour-pink-dark text-white text-sm font-medium rounded-full transition"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-lg transition"
+          >
+            <div class="relative h-64 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=400&fit=crop"
+                alt="Shimmer Eyeshadow Palette"
+                class="w-full h-full object-cover transition transform group-hover:scale-105"
+              />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 bg-glamour-pink text-white text-xs font-semibold rounded-full"
+                >Trending</span
+              >
+            </div>
+            <div class="p-5">
+              <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">
+                EYES
+              </p>
+              <h3 class="font-serif font-bold text-gray-900 mb-2">
+                Shimmer Eyeshadow Palette
+              </h3>
+              <div class="flex justify-between items-center">
+                <span class="text-glamour-pink font-bold text-lg">$42.99</span>
+                <button
+                  onclick="addToCart('Shimmer Eyeshadow Palette', 42.99)"
+                  class="px-4 py-2 bg-glamour-pink hover:bg-glamour-pink-dark text-white text-sm font-medium rounded-full transition"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-lg transition"
+          >
+            <div class="relative h-64 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=400&fit=crop"
+                alt="Vitamin C Serum"
+                class="w-full h-full object-cover transition transform group-hover:scale-105"
+              />
+              <span
+                class="absolute top-3 left-3 px-3 py-1 bg-glamour-pink text-white text-xs font-semibold rounded-full"
+                >Popular</span
+              >
+            </div>
+            <div class="p-5">
+              <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">
+                SKINCARE
+              </p>
+              <h3 class="font-serif font-bold text-gray-900 mb-2">
+                Vitamin C Serum
+              </h3>
+              <div class="flex justify-between items-center">
+                <span class="text-glamour-pink font-bold text-lg">$34.99</span>
+                <button
+                  onclick="addToCart('Vitamin C Serum', 34.99)"
+                  class="px-4 py-2 bg-glamour-pink hover:bg-glamour-pink-dark text-white text-sm font-medium rounded-full transition"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promotional Banner -->
+    <section
+      class="py-16 bg-gradient-to-r from-glamour-pink to-glamour-pink-dark"
+    >
+      <div
+        class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white"
+      >
+        <h2 class="text-3xl lg:text-4xl font-serif font-bold mb-4">
+          Free Shipping on Orders Over $50
+        </h2>
+        <p class="text-white/90 mb-8">
+          Use code GLOW at checkout. Limited time offer.
+        </p>
+        <a
+          href="products.html"
+          class="inline-block px-8 py-3 bg-white text-glamour-pink font-semibold rounded-full hover:bg-gray-100 transition"
+        >
+          Shop the Sale
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Brand -->
+          <div>
+            <a
+              href="index.html"
+              class="text-2xl font-bold font-serif text-gradient mb-4 block"
+              >Glamour</a
+            >
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Discover your beauty with our curated collection of premium makeup
+              and skincare.
+            </p>
+          </div>
+
+          <!-- Shop -->
+          <div>
+            <h4 class="font-serif font-bold text-gray-900 mb-4">Shop</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="products.html"
+                  class="text-gray-500 hover:text-glamour-pink transition"
+                  >All Products</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="text-gray-500 hover:text-glamour-pink transition"
+                  >Lips</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="text-gray-500 hover:text-glamour-pink transition"
+                  >Face</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="text-gray-500 hover:text-glamour-pink transition"
+                  >Eyes</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Help -->
+          <div>
+            <h4 class="font-serif font-bold text-gray-900 mb-4">Help</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-glamour-pink transition"
+                  >Shipping & Returns</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-glamour-pink transition"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-glamour-pink transition"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social -->
+          <div>
+            <h4 class="font-serif font-bold text-gray-900 mb-4">Follow Us</h4>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-glamour-pink hover:border-glamour-pink transition"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-glamour-pink hover:border-glamour-pink transition"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-glamour-pink hover:border-glamour-pink transition"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-200 mt-12 pt-8 text-center">
+          <p class="text-gray-400 text-sm">
+            Made with <i class="fas fa-heart text-glamour-pink"></i> by Glamour
+            &copy; 2026
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>
