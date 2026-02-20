@@ -113,11 +113,19 @@ function checkout() {
     alert("Your cart is empty!");
     return;
   }
-  alert("Thank you for your order! This is a demo checkout.");
-  localStorage.removeItem("cart");
+  window.location.href = "checkout.html";
+  // localStorage.removeItem("cart");
   renderCart();
   updateCartBadge();
 }
 
+function favoriteBadge() {
+  const cart = JSON.parse(localStorage.getItem("favorites")) || [];
+  const totalItems = cart.length;
+  const badge = document.getElementById("fav-badge");
+  if (badge) badge.textContent = totalItems;
+}
+
+favoriteBadge();
 renderCart();
 updateCartBadge();

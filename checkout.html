@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | Glamour</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Playfair Display", "serif"],
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            colors: {
+              glamour: {
+                pink: "#E8929C",
+                "pink-dark": "#D67B8A",
+                "pink-light": "#F5D5D9",
+                "pink-bg": "#FDF2F3",
+              },
+            },
+            ringColor: {
+              DEFAULT: "#E8929C", // default ring color
+            },
+            accentColor: {
+              glamour: {
+                pink: "#E8929C", // makes radio/checkbox use this color
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white font-sans min-h-screen">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a
+            href="index.html"
+            class="text-2xl font-bold font-serif text-glamour-pink"
+            >Glamour</a
+          >
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-600 hover:text-glamour-pink transition"
+              >Home</a
+            >
+            <a
+              href="products.html"
+              class="text-gray-600 hover:text-glamour-pink transition"
+              >Products</a
+            >
+            <a
+              href="cart.html"
+              class="text-gray-600 hover:text-glamour-pink transition"
+              >Cart</a
+            >
+          </nav>
+          <div class="flex items-center space-x-6">
+            <a
+              href="favorites.html"
+              class="relative text-gray-600 hover:text-glamour-pink transition"
+            >
+              <i class="fa-solid fa-heart text-xl"></i>
+              <span
+                id="fav-badge"
+                class="absolute -top-2 -right-2 bg-glamour-pink text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+                >0</span
+              >
+            </a>
+            <a
+              href="login.html"
+              class="text-gray-600 hover:text-glamour-pink transition"
+            >
+              <i class="far fa-user text-xl"></i>
+            </a>
+            <a href="cart.html" class="relative text-glamour-pink transition">
+              <i class="fa-solid fa-bag-shopping text-xl"></i>
+              <span
+                id="cart-badge"
+                class="absolute -top-2 -right-2 bg-glamour-pink text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+                >0</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="py-12 bg-gray-50 min-h-screen">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <a
+          href="cart.html"
+          class="inline-flex items-center text-gray-500 hover:text-glamour-pink mb-6 transition"
+        >
+          <i class="fas fa-arrow-left mr-2"></i> Back to Cart
+        </a>
+
+        <h1
+          class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-8"
+        >
+          Checkout
+        </h1>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Left: Forms -->
+          <div class="lg:col-span-2 space-y-8">
+            <!-- Contact & Delivery -->
+            <div
+              class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8"
+            >
+              <h2 class="text-xl font-serif font-bold text-gray-900 mb-6">
+                Contact & Delivery
+              </h2>
+              <form id="checkout-form" class="space-y-6">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-glamour-pink/30 focus:border-glamour-pink transition"
+                    placeholder="you@example.com"
+                  />
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1"
+                      >First Name</label
+                    >
+                    <input
+                      type="text"
+                      name="firstName"
+                      required
+                      class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-glamour-pink/30 focus:border-glamour-pink transition"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1"
+                      >Last Name</label
+                    >
+                    <input
+                      type="text"
+                      name="lastName"
+                      required
+                      class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-glamour-pink/30 focus:border-glamour-pink transition"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1"
+                    >Address</label
+                  >
+                  <input
+                    type="text"
+                    name="address"
+                    required
+                    class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-glamour-pink/30 focus:border-glamour-pink transition"
+                    placeholder="123 Beauty Street"
+                  />
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1"
+                      >City</label
+                    >
+                    <input
+                      type="text"
+                      name="city"
+                      required
+                      class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-glamour-pink/30 focus:border-glamour-pink transition"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1"
+                      >State</label
+                    >
+                    <input
+                      type="text"
+                      name="state"
+                      class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-glamour-pink/30 focus:border-glamour-pink transition"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1"
+                      >ZIP Code</label
+                    >
+                    <input
+                      type="text"
+                      name="zip"
+                      required
+                      class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-glamour-pink/30 focus:border-glamour-pink transition"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8"
+            >
+              <h2 class="text-xl font-serif font-bold text-gray-900 mb-6">
+                Payment Method
+              </h2>
+              <div class="space-y-4">
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <label class="flex items-center gap-3 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="payment"
+                      value="card"
+                      class="w-5 h-5 accent-glamour-pink"
+                      checked
+                    />
+                    <span class="font-medium text-gray-800"
+                      >Credit / Debit Card</span
+                    >
+                  </label>
+                </label>
+                <div class="pl-8 space-y-4" id="card-fields">
+                  <input
+                    type="text"
+                    placeholder="Card number"
+                    class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-glamour-pink/30 focus:border-glamour-pink"
+                  />
+                  <div class="grid grid-cols-2 gap-6">
+                    <input
+                      type="text"
+                      placeholder="MM / YY"
+                      class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-glamour-pink/30 focus:border-glamour-pink"
+                    />
+                    <input
+                      type="text"
+                      placeholder="CVV"
+                      class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-glamour-pink/30 focus:border-glamour-pink"
+                    />
+                  </div>
+                </div>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="payment"
+                    value="cod"
+                    class="w-5 h-5 accent-glamour-pink"
+                  />
+                  <span class="font-medium text-gray-800"
+                    >Cash on Delivery</span
+                  >
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-1">
+            <div
+              class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sticky top-24"
+            >
+              <h2 class="text-xl font-serif font-bold text-gray-900 mb-6">
+                Order Summary
+              </h2>
+
+              <div
+                id="order-items"
+                class="space-y-5 mb-6 divide-y divide-gray-100"
+              ></div>
+
+              <div class="space-y-4 mb-6">
+                <div class="flex justify-between text-gray-600">
+                  <span>Subtotal</span>
+                  <span id="subtotal">$0.00</span>
+                </div>
+                <div class="flex justify-between text-gray-600">
+                  <span>Shipping</span>
+                  <span id="shipping">$5.99</span>
+                </div>
+                <div
+                  class="border-t border-gray-100 pt-4 flex justify-between font-bold text-gray-900 text-lg"
+                >
+                  <span>Total</span>
+                  <span id="total" class="text-glamour-pink">$0.00</span>
+                </div>
+              </div>
+
+              <div
+                id="free-shipping-msg"
+                class="mb-6 p-4 bg-glamour-pink-bg rounded-xl text-sm text-glamour-pink-dark"
+              >
+                Add $<span id="amount-needed">50.00</span> more for free
+                shipping!
+              </div>
+
+              <button
+                id="place-order"
+                class="w-full py-4 bg-glamour-pink hover:bg-glamour-pink-dark text-white font-semibold rounded-xl transition flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <span id="place-order-text">Place Order</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-50 border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <a
+              href="index.html"
+              class="text-2xl font-bold font-serif text-gradient mb-4 block"
+              >Glamour</a
+            >
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Discover your beauty with our curated collection of premium makeup
+              and skincare.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-serif font-bold text-gray-900 mb-4">Shop</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="products.html"
+                  class="text-gray-500 hover:text-glamour-pink transition"
+                  >All Products</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="text-gray-500 hover:text-glamour-pink transition"
+                  >Lips</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="text-gray-500 hover:text-glamour-pink transition"
+                  >Face</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="text-gray-500 hover:text-glamour-pink transition"
+                  >Eyes</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-serif font-bold text-gray-900 mb-4">Help</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-glamour-pink transition"
+                  >Shipping & Returns</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-glamour-pink transition"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-glamour-pink transition"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-serif font-bold text-gray-900 mb-4">Follow Us</h4>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-glamour-pink hover:border-glamour-pink transition"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-glamour-pink hover:border-glamour-pink transition"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-glamour-pink hover:border-glamour-pink transition"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-200 mt-12 pt-8 text-center">
+          <p class="text-gray-400 text-sm">
+            Made with <i class="fas fa-heart text-glamour-pink"></i> by Glamour
+            &copy; 2026
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script/checkout.js"></script>
+  </body>
+</html>

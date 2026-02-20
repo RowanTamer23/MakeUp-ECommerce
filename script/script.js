@@ -1,5 +1,3 @@
-// import { updateCartBadge } from "./cart";
-
 function addToCart(name, price) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   const existingItem = cart.find((item) => item.name === name);
@@ -22,4 +20,15 @@ function updateCartBadge() {
   if (badge) badge.textContent = totalItems;
 }
 
+function ShopByCategory(category) {
+  window.location.href = `products.html?category=${category}`;
+}
+
+function favoriteBadge() {
+  const cart = JSON.parse(localStorage.getItem("favorites")) || [];
+  const totalItems = cart.length;
+  const badge = document.getElementById("fav-badge");
+  if (badge) badge.textContent = totalItems;
+}
+favoriteBadge();
 updateCartBadge();
